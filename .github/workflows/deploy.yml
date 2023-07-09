@@ -18,10 +18,8 @@ jobs:
       - name: Build and export the app
         run: |
           npm run build
-          # npm run export
-          touch out/.nojekyll
       - name: Deploy to Github Pages
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
           branch: gh-pages
-          folder: out
+          folder: build
